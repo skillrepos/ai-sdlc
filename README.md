@@ -1,5 +1,5 @@
 # ai-sdlc
-Repository for Incorporating AI into your SDLC 
+Repository for Adding AI into your Software Development Processess
 
 These instructions will guide you through configuring a GitHub Codespaces environment that you can use to run the code. 
 
