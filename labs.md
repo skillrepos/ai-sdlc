@@ -72,7 +72,7 @@ Is there already a module that implements our data store?
 </br></br>
 ![Copilot indexed](./images/sdlc62.png?raw=true "Copilot indexed")
 <br><br>
-6. With the index in place, let's see how Copilot responds to a generic request. In the chat interface, Copilot should be in "Ask" mode. Go to Copilot Chat interface (on the right) and type in the prompt below. (Note we are using the chat variable **#codebase** to tell Copilot to look at the complete set of code in our app.) 
+6. With the index in place, let's see how Copilot responds to a generic request. In the chat interface, Copilot should be in "Ask" mode. (If not, click on the dropdown in the chat interface and select "Ask" - see second screenshot below.) In the Chat interface, type in the prompt below and submit it. (Note we are using the chat variable **#codebase** to tell Copilot to look at the complete set of code in our app.) 
 <br><br>
 ```
 Where in this #codebase do we enforce authentication?
@@ -80,6 +80,10 @@ Where in this #codebase do we enforce authentication?
 <br><br>
 ![Prompting Copilot](./images/sdlc63.png?raw=true "Prompting Copilot")
 <br><br>
+![Switching to Ask mode](./images/sdlc91.png?raw=true "Switching to Ask mode")
+<br><br>
+
+
 7. Note that the answers that come back have the information, but are also more conversational in their response. (The answer may vary in format and text depending on several factors.)
 <br><br>
 ![Copilot response to authentication prompt](./images/sdlc64.png?raw=true "Copilot response to authentication prompt")
