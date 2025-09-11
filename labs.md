@@ -1,7 +1,7 @@
 # Incorporating AI into your SDLC
 ## Leveraging AI tooling across the phases of your software development lifecycle
 ## Session labs 
-## Revision 1.13 - 06/23/25
+## Revision 1.14 - 09/10/25
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -42,7 +42,7 @@ code datastore.py
 ![Viewing app files](./images/sdlc85.png?raw=true "Viewing app files")
 
 <br><br><br>
-2. Let's see how we can create a standalone index for the code that the AI can leverage to get more details. In the *extra* directory in the project are a set of python tools for this. Run the command below to create a standalone index using ChromaDB for our code. (If you want to understand more about how these work, you can look at the actual code in the Python files in *extra*). **This will take several minutes to run**.
+2. Let's see how we can create a standalone index for the code that the AI can leverage to get more details. In the *extra* directory in the project are a set of python tools for this. Run the command below to create a standalone index using ChromaDB for our code. (If you want to understand more about how these work, you can look at the actual code in the Python files in *extra*). **This will take a little time to run**.
  <br><br> 
 ```
 python ../extra/index_code.py
@@ -65,14 +65,14 @@ Is there already a module that implements our data store?
 <br><br>
 4. What you are seeing here is just the hits from searching the vector database that we created. To make this more useful, we would get these hits to an LLM by adding to the prompt to give it more specific context. Copilot does a version of this by *indexing* our code in the codespace environment.
 <br><br>
-5. Click on the Copilot icon at the bottom. If you see a blue button to Setup Copilot, go ahead and click on that. Then check the two checkboxes for "Code Completions (all files)" and "Code Completions (Python)".  After a few moments, if you click the icon again, you should see a line near the middle of that dialog that either says "Locally indexed" or "Remotely indexed". 
+5. Click on the Copilot icon at the bottom. If you see a blue button to Setup Copilot, go ahead and click on that. Then check the two checkboxes for "Code Completions (all files)" and "Code Completions (Python)".  After a few moments, if you click the icon again, you should see a line near the middle of that dialog that either says "Locally indexed" or "Remotely indexed". (You might also see it still spinning for a while while it is checking the remote index.)
 <br><br>
 ![Setup Copilot](./images/sdlc87.png?raw=true "Setup Copilot")
 
 </br></br>
 ![Copilot indexed](./images/sdlc62.png?raw=true "Copilot indexed")
 <br><br>
-6. With the index in place, let's see how Copilot responds to a generic request. Go to the Copilot Chat interface (on the right) and type in the prompt below. (Note we are using the chat variable **#codebase** to tell Copilot to look at the complete set of code in our app.) 
+6. With the index in place, let's see how Copilot responds to a generic request. In the chat interface, Copilot should be in "Ask" mode. Go to Copilot Chat interface (on the right) and type in the prompt below. (Note we are using the chat variable **#codebase** to tell Copilot to look at the complete set of code in our app.) 
 <br><br>
 ```
 Where in this #codebase do we enforce authentication?
@@ -385,7 +385,7 @@ Refactor the files to make them more efficient.
 
 ![doc results](./images/sdlc50.png?raw=true "doc results")
 
-3. To get comments in the body of the code, we need to further prompt the AI. Let's tell Copilot to verbosely comment the code. Bring up the inline chat dialog and enter the prompt below in Copilot. (Optional: You can also choose to change the model that's being used by clicking on the model name. In the dialog, select a model that is "1x" so it "cost" the same from your quota to use.  You might have to click an "Enable" button afterwards to enable the model access.)  Hit Enter/submit when done.
+3. To get comments in the body of the code, we need to further prompt the AI. Let's tell Copilot to verbosely comment the code. Bring up the inline chat dialog and enter the prompt below in Copilot. (Optional: You can also choose to change the model that's being used by clicking on the model name. In the dialog, select a model that is "1x" or "0x" so it "cost" the same from your quota to use.  You might have to click an "Enable" button afterwards to enable the model access.)  Hit Enter/submit when done.
 
 ```
 Verbosely comment all code in this file so it is easy to follow and understand
@@ -410,7 +410,7 @@ Generate Sphinx-style .rst API documentation for this Flask service
 7. Let's try another example. Let's have the AI generate simple functional documentation that we can share with others. Use the prompt below for this:
 
 ```
-Generate functional documentation for the app
+Generate functional documentation for the app and create a new block
 ```
 
 8. After the documentation is generated, you can hover over the output and insert it into a new file if you want. If you then save the file with a .md extension, you'll be able to see the document in Markdown format. (You can use the three-bar menu, in the upper left of the codespace, then select "File", then "Save As...".)
