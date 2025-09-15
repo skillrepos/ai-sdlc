@@ -1,7 +1,7 @@
 # Incorporating AI into your SDLC
 ## Leveraging AI tooling across the phases of your software development lifecycle
 ## Session labs 
-## Revision 1.15 - 09/15/25
+## Revision 1.16 - 09/15/25
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -389,7 +389,7 @@ Refactor the files to make them more efficient.
 
 ![doc results](./images/sdlc50.png?raw=true "doc results")
 
-3. To get comments in the body of the code, we need to further prompt the AI. Let's tell Copilot to verbosely comment the code. Bring up the inline chat dialog and enter the prompt below in Copilot. (Optional: You can also choose to change the model that's being used by clicking on the model name. In the dialog, select a model that is "1x" or "0x" so it "cost" the same from your quota to use.  You might have to click an "Enable" button afterwards to enable the model access.)  Hit Enter/submit when done.
+3. To get comments in the body of the code, we need to further prompt the AI. Let's tell Copilot to verbosely comment the code. Bring up the inline chat dialog and enter the prompt below in Copilot. (Optional: You can also choose to change the model that's being used by clicking on the model name. In the dialog, select a model that is "1x" or "0x" so it "cost" the same from your quota to use.  You might have to click an "Enable" button afterwards to enable the model access.)  Hit Enter/submit when done. (**NOTE:** If you don't get comments generated throughout the code, try issuing the same prompt in the main chat interface instead of the inline one.)
 
 ```
 Verbosely comment all code in this file so it is easy to follow and understand
