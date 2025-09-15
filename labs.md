@@ -222,9 +222,9 @@ Fix the delete endpoint so that deleting a missing item returns 404 JSON {error:
 ![Fix delete](./images/sdlc22.png?raw=true "Fix delete")
 
 
-5. After Copilot processes this, you should see a changed app.py file. Let's add Copilot as a reviewer to have it take a look. Go to the diff (green part) and right-click and select the menu item "Copilot" -> "Review and comment".
+5. After Copilot processes this, you should see a changed app.py file. Let's add Copilot as a reviewer to have it take a look. Go to the diff (green part) and right-click and select the menu item "Generate Code" -> "Review".
 
-![Add Copilot review](./images/sdlc23.png?raw=true "Add Copilot review")
+![Add Copilot review](./images/sdlc93.png?raw=true "Add Copilot review")
 
 6. You'll then need to select a range for it to review. You can just tell it to review the entire delete_item function.
 
