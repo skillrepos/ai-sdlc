@@ -1,7 +1,7 @@
 # Incorporating AI into your SDLC
 ## Leveraging AI tooling across the phases of your software development lifecycle
 ## Session labs 
-## Revision 1.14 - 09/10/25
+## Revision 1.15 - 09/15/25
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -123,9 +123,9 @@ What would it take to change #codebase to use JWT for authentication?
 python app.py
 ```
 
-2. Next, let's open a second terminal to use for sending commands to the app. Right-click in the terminal and select *Split Terminal* to get a second terminal next to the current one.
+2. Next, let's open a second terminal to use for sending commands to the app. Right-click in the terminal and select the two-column icon (*Split Terminal*) to get a second terminal next to the current one.
 
-![Split terminal](./images/sdlc9.png?raw=true "Split terminal")
+![Split terminal](./images/sdlc92.png?raw=true "Split terminal")
 
 3. Our code is missing a *search* feature currently. Try the following command in the new terminal.
 
