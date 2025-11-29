@@ -29,7 +29,7 @@
 1. For our labs in this workshop, we have a set of code that implements a simple *to-do* app, written in Python with a toolkit called *Flask*.
    The files for this app are in a subdirectory named *app*.  Change into that directory in the terminal and take a look at the app's files.
    To view the files, you can either click on them in the file list on the left or you can open them with the *code* commands below. But make sure to switch into the *app* directory.)
-<br><br>
+<br>
 
 ```
 cd app
@@ -41,7 +41,8 @@ code datastore.py
 
 ![Viewing app files](./images/sdlc85.png?raw=true "Viewing app files")
 
-<br><br><br>
+<br><br>
+
 2. Let's see how we can create a standalone index for the code that the AI can leverage to get more details. In the *extra* directory in the project are a set of python tools for this. Run the command below to create a standalone index using ChromaDB for our code. (If you want to understand more about how these work, you can look at the actual code in the Python files in *extra*). **This will take a little time to run**.
  <br><br> 
 ```
@@ -51,67 +52,102 @@ python ../extra/index_code.py
 
 ![Creating vector DB](./images/sdlc86.png?raw=true "Creating vector DB")
 
-<br><br><br>
+<br><br>
 
 3. This created an index that is persisted in a *ChromaDB* database. Now we can run a simple search tool that will take whatever prompt/query we enter and return the primary match that it finds in the index of our codebase. Run the first command below. Then you can enter prompts like the next two lines. Type "exit" to quit.
-<br><br>
+
+<br>
+
 ```
 python ../extra/search.py
 Where does the code use authentication?
 Is there already a module that implements our data store?
 ```
-<br><br>
+<br>
+
 ![Searching vector DB](./images/sdlc3.png?raw=true "Searching vector DB")
+
 <br><br>
+
 4. What you are seeing here is just the hits from searching the vector database that we created. To make this more useful, we would get these hits to an LLM by adding to the prompt to give it more specific context. Copilot does a version of this by *indexing* our code in the codespace environment.
+
 <br><br>
-5. Click on the Copilot icon at the bottom. If you see a blue button to Setup Copilot, go ahead and click on that. Then check the two checkboxes for "Code Completions (all files)" and "Code Completions (Python)".  After a few moments, if you click the icon again, you should see a line near the middle of that dialog that either says "Locally indexed" or "Remotely indexed". (You might also see it still spinning for a while while it is checking the remote index.)
+
+5. Click on the Copilot icon at the bottom. If you see a blue button to "Setup Copilot" or "Use AI Features", go ahead and click on that. Then check the two checkboxes for "Code Completions (all files)" and "Code Completions (Python)".  After a few moments, if you click the icon again, you should see a line near the middle of that dialog that either says "Locally indexed" or "Remotely indexed". (You might also see it still spinning for a while while it is checking the remote index.)
 <br><br>
 ![Setup Copilot](./images/sdlc87.png?raw=true "Setup Copilot")
 
-</br></br>
+<br><br>
+
 ![Copilot indexed](./images/sdlc62.png?raw=true "Copilot indexed")
 <br><br>
 6. With the index in place, let's see how Copilot responds to a generic request. In the chat interface, Copilot should be in "Ask" mode. (If not, click on the dropdown in the chat interface and select "Ask" - see second screenshot below.) In the Chat interface, type in the prompt below and submit it. (Note we are using the chat variable **#codebase** to tell Copilot to look at the complete set of code in our app.) 
-<br><br>
+
+<br>
+
 ```
 Where in this #codebase do we enforce authentication?
 ```
-<br><br>
+
+<br>
+
 ![Prompting Copilot](./images/sdlc63.png?raw=true "Prompting Copilot")
-<br><br>
+
+<br>
+
 ![Switching to Ask mode](./images/sdlc91.png?raw=true "Switching to Ask mode")
+
 <br><br>
 
 
 7. Note that the answers that come back have the information, but are also more conversational in their response. (The answer may vary in format and text depending on several factors.)
-<br><br>
+
+<br>
+
 ![Copilot response to authentication prompt](./images/sdlc64.png?raw=true "Copilot response to authentication prompt")
+
 <br><br>
+
 8. We can also try our other example. Enter the prompt below. After running, you should see something like the screenshot below.
-<br><br>
+
+<br>
+
 ```
 Is there a module in our #codebase that handles data storage?
 ```
-<br><br>
+
+<br>
+
 ![Copilot response to datastore prompt](./images/sdlc66.png?raw=true "Copilot response to datastore prompt")
+
 <br><br>
+
 9. Let's try one more query here. To demonstrate further how AI can help with planning, prompt Copilot with the prompt below (JWT = JSON Web Token):
-<br><br>
+
+<br>
+
 ```
 What would it take to change #codebase to use JWT for authentication?
 ```
-<br><br>
+
+<br>
+
 ![Prompting Copilot](./images/sdlc67.png?raw=true "Prompting Copilot")
+
 <br><br>
+
 10. After this runs, you should see an answer in the chat screen similar to what's shown in the screenshot below. Notice that it includes not only text explanations, but also the changed code. If you scroll down, you'll likely see a summary of the changes needed.
-<br><br>
+
+<br>
+
 ![Copilot response to JWT prompt](./images/sdlc68.png?raw=true "Copilot response to JWT prompt")
+
 <br><br>
+
 <p align="center">
-**[END OF LAB]**
+<b>[END OF LAB]</b>
 </p>
-</br></br></br>
+</br></br>
 
 **Lab 2: Using AI during the coding phase**
 
@@ -123,9 +159,13 @@ What would it take to change #codebase to use JWT for authentication?
 python app.py
 ```
 
+<br><br>
+
 2. Next, let's open a second terminal to use for sending commands to the app. Right-click in the terminal and select the two-column icon (*Split Terminal*) to get a second terminal next to the current one.
 
 ![Split terminal](./images/sdlc92.png?raw=true "Split terminal")
+
+<br><br>
 
 3. Our code is missing a *search* feature currently. Try the following command in the new terminal.
 
@@ -136,9 +176,15 @@ curl -i \
   http://127.0.0.1:5000/items/search?q=milk
 ```
 
+<br><br>
+
 4. Notice that we get a 404 response and a message indicating that the URL was not found on the server.
 
+<br><br>
+
 5. In our repository, we already have a GitHub Issue for this feature. Take a look at it by clicking on this link: [GitHub Issue #1](https://github.com/skillrepos/ai-sdlc/issues/1)
+
+<br><br>
 
 6. In order to use this information as context for the AI, we'll add the text of the issue to the AI's prompt context. First, we need to get the text from the issue.
 We have a script for this in our project. Run the command below to do this. (The "1" is the number of the GitHub Issue.)
@@ -147,17 +193,25 @@ We have a script for this in our project. Run the command below to do this. (The
 ../scripts/get-issue-info.sh 1
 ```
 
+<br><br>
+
 7. The output of running this file should be a new file in your project named FIX_ISSUE_1.md. You can click on it and open it up to view the contents.
 
 ![Displaying file](./images/sdlc11.png?raw=true "Displaying file")
+
+<br><br>
 
 8. In Copilot's Chat interface, change the mode to "Agent" by clicking on the drop-down labeled "Ask" at the bottom.
 
 ![Switch to Agent mode](./images/sdlc10.png?raw=true "Switch to Agent mode")
 
+<br><br>
+
 9. We now want to add this file as context for our prompt in the Chat panel. Click on the "Add context" item in the prompt area and select it from the list that pops up. (You may have to scroll down to find it.)
 
 ![Adding context](./images/sdlc13.png?raw=true "Adding context")
+
+<br><br>
 
 10. With the FIX_ISSUE_1.md file attached as context, enter the following prompt in the chat area and then submit it (via *Enter* or with the button that looks like an arrow head at the bottom right of the dialog).
 
@@ -166,11 +220,21 @@ Here's the full text of GitHub Issue #1. Propose a diff to our Python codebase t
 ```
 ![Context and prompt](./images/sdlc15.png?raw=true "Context and prompt")
 
-11. After Copilot processes the prompt, it should show two files changed - *app.py* and *datastore.py* - in a box above the Chat text entry area. Click on the "+ -"  icon on the right of the "2 files changed" area in the dialog. (See figure below).  Take a look at the diffs. When you are satisfied with the proposed changes, click on the *Keep* button in the *Files changed* dialog. Then you can close the tab that was opened to show the comparisons.
+<br><br>
+
+11. Copilot will generate a "plan". After that, it may proceed to start making changes or it may stop. If it stops, tell it to proceed with the plan by typing "proceed" into the chat entry area and hitting "Enter".
+
+After Copilot processes the prompt, it should show two files changed - *app.py* and *datastore.py* - in a box above the Chat text entry area. 
+
+Click on the "+ -"  icon on the right of the "2 files changed" area in the dialog. (See figure below).  Take a look at the diffs. When you are satisfied with the proposed changes, click on the *Keep* button in the *Files changed* dialog. Then you can close the tab that was opened to show the comparisons.
 
 ![Reviewing changes](./images/sdlc88.png?raw=true "Reviewing changes")
 
+<br><br>
+
 12. Now, let's try the *search* operation again. If your app was running when you made the changes in step 9, it should have automatically reloaded. If you see a message in its output of the sort "Detected change ... reloading", you should be good to go. But if you don't have that you can kill the process (CTRL+C) and then run the app again.
+
+<br><br>
 
 13. You can try the search operation with the same curl command as before. This time, it should run and return a 200 code rather than 404 since the search endpoint is implemented. If the item is found, it will return the found item. If not, it returns the empty set "[]".
 
@@ -181,11 +245,16 @@ curl -i \
   http://127.0.0.1:5000/items/search?q=milk
 ```
 
+<br><br>
+
 14. (Optional) To show that the search function actually returns an item after adding, there is a script in the "scripts" directory named use-app.sh. You can open it up and look at it. It adds a new item, lists it, then does a search and delete. You can run it with the command below and then see it's output.
 
 ```
 ../scripts/use-app.sh
 ```
+
+<br><br>
+
  <p align="center">
 **[END OF LAB]**
 </p>
