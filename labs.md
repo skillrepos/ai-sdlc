@@ -316,7 +316,7 @@ Fix the delete endpoint so that deleting a missing item returns 404 JSON {error:
 
 <br><br>
 
-6. You'll then need to select a range for it to review. You can just tell it to review the entire delete_item function.
+6. You'll then need to select a range for it to review (dialog at the top center). You can just tell it to review the entire delete_item function.
 
 ![Pick review range](./images/sdlc24.png?raw=true "Pick review range")
 
