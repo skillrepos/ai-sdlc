@@ -1,7 +1,7 @@
 # Incorporating AI into your SDLC
 ## Leveraging AI tooling across the phases of your software development lifecycle
 ## Session labs 
-## Revision 1.17 - 11/29/25
+## Revision 1.18 - 12/11/25
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -102,11 +102,13 @@ Where in this #codebase do we enforce authentication?
 <br><br>
 
 
-7. Note that the answers that come back have the information, but are also more conversational in their response. (The answer may vary in format and text depending on several factors.)
+7. If needed for a particular LLM, click *Enable*. Note that the answers that come back have the information, but are also more conversational in their response. (The answer may vary in format and text depending on several factors.)
 
 <br>
 
 ![Copilot response to authentication prompt](./images/sdlc64.png?raw=true "Copilot response to authentication prompt")
+
+If you don't get an answer about the code, but instead get asked to run commands to find out information, the indexing may not be far enough along yet. You can circle back and try the request again after you go through the next few steps.
 
 <br><br>
 
