@@ -45,8 +45,11 @@ code datastore.py
 
 <br><br>
 
-2. Let's see how we can create a standalone index for the code that the AI can leverage to get more details. In the *extra* directory in the project are a set of python tools for this. Run the command below to create a standalone index using ChromaDB for our code. (If you want to understand more about how these work, you can look at the actual code in the Python files in *extra*). **This will take a little time to run**.
- <br><br> 
+2. Let's see how we can create a standalone index for the code that the AI can leverage to get more details. In the *extra* directory in the project are a set of python tools for this. Run the command below to create a standalone index using ChromaDB for our code. (If you want to understand more about how these work, you can look at the actual code in the Python files in *extra*). **This will take a minute or longer to startup. During this time, it won't appear to be doing anything, but it is progressing.**
+
+  
+<br><br>
+
 ```
 python ../extra/index_code.py
 ```
