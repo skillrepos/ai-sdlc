@@ -375,7 +375,7 @@ Write pytest unit tests for DataStore (all CRUD + search) and Flask integration 
 
 <br><br>
 
-3. As this runs, if you encounter points where Copilot wants to run commands in the terminal and/or offers a "Continue" button, go ahead and accept that. If it simply notes commands and stops, go ahead and copy and paste those into the terminal and run them.
+3. As this runs, if you encounter points where Copilot wants to run commands in the terminal and/or offers a "Continue" button, go ahead and accept that. Or if it offers an "Allow" button, you can click on that. If it simply notes commands and stops, go ahead and copy and paste those into the terminal and run them.
 
 ![Continue to execute command](./images/sdlc30.png?raw=true "Continue to execute command")
 
