@@ -167,7 +167,7 @@ python app.py
 
 <br><br>
 
-2. Next, let's open a second terminal to use for sending commands to the app. Right-click in the terminal and select the two-column icon (*Split Terminal*) to get a second terminal next to the current one.
+2. Next, let's open a second terminal to use for sending commands to the app. Above the terminal, click the two-column icon (*Split Terminal*) to get a second terminal next to the current one.
 
 ![Split terminal](./images/sdlc92.png?raw=true "Split terminal")
 
