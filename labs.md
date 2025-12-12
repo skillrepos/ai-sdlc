@@ -233,7 +233,7 @@ Here's the full text of GitHub Issue #1. Propose a diff to our Python codebase t
 
 11. Copilot will generate a "plan". After that, it may proceed to start making changes or it may stop. If it stops, tell it to proceed with the plan by typing "proceed" into the chat entry area and hitting "Enter".
 
-After Copilot processes the prompt, it should show two files changed - *app.py* and *datastore.py* - in a box above the Chat text entry area. 
+After Copilot processes the prompt, it should show two files changed - *app.py* and *datastore.py* - in a box above the Chat text entry area. (You may need to click on the ">" symbol to expand the list.)
 
 Click on the "+ -"  icon on the right of the "2 files changed" area in the dialog. (See figure below).  Take a look at the diffs. When you are satisfied with the proposed changes, click on the *Keep* button in the *Files changed* dialog. Then you can close the tab that was opened to show the comparisons.
 
