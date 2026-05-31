@@ -1,7 +1,7 @@
 # Incorporating AI into your SDLC
 ## Leveraging AI tooling across the phases of your software development lifecycle
 ## Session labs 
-## Revision 1.20 - 05/31/26
+## Revision 1.21 - 05/31/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -310,40 +310,30 @@ curl -i \
 
 <br><br>
 
-3. Select/open the app.py file in the editor so it will be the current context. Then, so we have more control over changes, switch Copilot back to "Edit mode" by clicking on the drop-down at the bottom of the chat input dialog. If a dialog pops up about changing the chat, just answer "Yes".
-
-![Switch mode](./images/sdlc21.png?raw=true "Switch mode")
+3. Open a new chat. Select/open the app.py file in the editor so it will be the current context. You should be in `Agent` mode by default. (If not, switch to it in the same way as before.)
 
 <br><br>
 
 4. Now, let's let Copilot have a try at fixing this. Enter and submit the following prompt.
 
 ```
-Fix the delete endpoint so that deleting a missing item returns 404 JSON {error: 'Not found'} instead of a server error.
+Fix the delete endpoint so that deleting a missing item returns 404 JSON {error: 'Not found'} instead of a server error. Do not create or run tests.
 ```
 
-![Fix delete](./images/sdlc22.png?raw=true "Fix delete")
+![Fix delete](./images/sdlc118.png?raw=true "Fix delete")
 
 <br><br>
 
 
-5. After Copilot processes this, you should see a changed app.py file. Let's add Copilot as a reviewer to have it take a look. Go to the diff (green part) and right-click and select the menu item "Generate Code" -> "Review".
+5. After Copilot processes this, you should see a changed app.py file. Let's add Copilot as a reviewer to have it take a look. Go to the diff (green part) and right-click and select the menu item `Review`.
 
-![Add Copilot review](./images/sdlc93.png?raw=true "Add Copilot review")
-
-<br><br>
-
-6. You'll then need to select a range for it to review (dialog at the top center). You can just tell it to review the entire delete_item function.
-
-![Pick review range](./images/sdlc24.png?raw=true "Pick review range")
+![Add Copilot review](./images/sdlc119.png?raw=true "Add Copilot review")
 
 <br><br>
 
-7. Copilot should review the proposed changes and offer any suggestions. For this case, it may or may not have any suggestions. If it doesn't have any suggestions ,you can just select "OK". If it does have suggestions, they will show up in a *COMMENTS* tab in the same area as the *TERMINAL* tab. You can then look at each one and decide whether to Apply/Discard using the provided buttons.
+6. Copilot should review the proposed changes and offer any suggestions. For this case, it may or may not have any suggestions. If it doesn't have any suggestions ,you can just select "OK". If it does have suggestions, they will show up in a *COMMENTS* tab in the same area as the *TERMINAL* tab. You can then look at each one and decide whether to Apply/Discard using the provided buttons.
 
-![Review output](./images/sdlc25.png?raw=true "Review output")
-
-![Review output](./images/sdlc70.png?raw=true "Review output")
+![Review output](./images/sdlc120.png?raw=true "Review output")
 
 <br><br>
 
