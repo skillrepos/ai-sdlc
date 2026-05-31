@@ -1,7 +1,7 @@
 # Incorporating AI into your SDLC
 ## Leveraging AI tooling across the phases of your software development lifecycle
 ## Session labs 
-## Revision 1.21 - 05/31/26
+## Revision 1.22 - 05/31/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -378,13 +378,13 @@ Fix the delete endpoint so that deleting a missing item returns 404 JSON {error:
 Write pytest unit tests for DataStore (all CRUD + search) and Flask integration tests for each endpoint (including auth failure).
 ```
 
-![Prompt for tests](./images/sdlc28.png?raw=true "Prompt for tests")
+![Prompt for tests](./images/sdlc121.png?raw=true "Prompt for tests")
 
 <br><br>
 
 3. As this runs, if you encounter points where Copilot wants to run commands in the terminal and/or offers a "Continue" button, go ahead and accept that. Or if it offers an "Allow" button, you can click on that. If it simply notes commands and stops, go ahead and copy and paste those into the terminal and run them.
 
-![Continue to execute command](./images/sdlc30.png?raw=true "Continue to execute command")
+![Continue to execute command](./images/sdlc122.png?raw=true "Continue to execute command")
 
 <br><br>
 
@@ -396,7 +396,7 @@ Write pytest unit tests for DataStore (all CRUD + search) and Flask integration 
 
 5. After the testing commands are run, you should hopefully see a clean run and the agent will notify you that things have completed successfully. (If not, you may have to go through several iterations of interacting with Copilot while the agent fixes things to have passing tests.)
 
-![Clean test run](./images/sdlc31.png?raw=true "Clean test run")
+![Clean test run](./images/sdlc123.png?raw=true "Clean test run")
 
 <br>
 
@@ -429,7 +429,7 @@ What else in the #codebase should we test?
 Just add the most important ones.
 ```
 
-![Add most important](./images/sdlc35.png?raw=true "Add most important")
+![Add most important](./images/sdlc125.png?raw=true "Add most important")
 
 <br><br>
 
