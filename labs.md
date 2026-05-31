@@ -78,15 +78,33 @@ Is there already a module that implements our data store?
 
 <br><br>
 
-5. Click on the Copilot icon at the bottom. If you see a blue button to "Setup Copilot" or "Use AI Features", go ahead and click on that. Then check the two checkboxes for "Code Completions (all files)" and "Code Completions (Python)".  After a few moments, if you click the icon again, you should see a line near the middle of that dialog that either says "Locally indexed" or "Remotely indexed". (You might also see it still spinning for a while while it is checking the remote index.)
-<br><br>
+5. Click on the Copilot icon at the bottom. If you see a blue button to "Setup Copilot" or "Use AI Features", go ahead and click on that. 
+   
 ![Setup Copilot](./images/sdlc87.png?raw=true "Setup Copilot")
 
 <br><br>
 
-![Copilot indexed](./images/sdlc62.png?raw=true "Copilot indexed")
+Then you'll likely see a link that says `Index?`. Click on that link to have Copilot create a local index of the repository.
+
 <br><br>
-6. With the index in place, let's see how Copilot responds to a generic request. In the chat interface, Copilot should be in "Ask" mode. (If not, click on the dropdown in the chat interface and select "Ask" - see second screenshot below.) In the Chat interface, type in the prompt below and submit it. (Note we are using the chat variable **#codebase** to tell Copilot to look at the complete set of code in our app.) 
+
+![Copilot indexing](./images/sdlc94.png?raw=true "Indexing with Copilot")
+
+<br><br>
+
+After a few moments, you should see an indication that the index was successfully created.
+
+![Copilot indexing](./images/sdlc95.png?raw=true "Indexing with Copilot")
+
+<br><br>
+
+6. With the index in place, let's see how Copilot responds to a generic request. In the chat interface, Copilot will likely be in `Agent` mode. We want it to be in `Ask` mode for this part. Click on the second icon from left in the Chat interface, and select `Ask` mode. (See screenshot below.)
+
+![Switching to Ask mode](./images/sdlc96.png?raw=true "Switching to Ask mode") 
+
+<br><br>
+
+7. Now, enter the prompt below and submit it. (Note we are using the chat variable **#codebase** to tell Copilot to look at the complete set of code in our app.) 
 
 <br>
 
@@ -96,26 +114,21 @@ Where in this #codebase do we enforce authentication?
 
 <br>
 
-![Prompting Copilot](./images/sdlc63.png?raw=true "Prompting Copilot")
+![Prompting Copilot](./images/sdlc97.png?raw=true "Prompting Copilot")
 
-<br>
-
-![Switching to Ask mode](./images/sdlc91.png?raw=true "Switching to Ask mode")
 
 <br><br>
 
 
-7. If needed for a particular LLM, click *Enable*. Note that the answers that come back have the information, but are also more conversational in their response. (The answer may vary in format and text depending on several factors.)
+8. If needed for a particular LLM, click *Enable*. Note that the answers that come back have the information, but are also more conversational in their response. (The answer may vary in format and text depending on several factors.)
 
 <br>
 
-![Copilot response to authentication prompt](./images/sdlc64.png?raw=true "Copilot response to authentication prompt")
-
-If you don't get an answer about the code, but instead get asked to run commands to find out information, the indexing may not be far enough along yet. You can circle back and try the request again after you go through the next few steps.
+![Copilot response to authentication prompt](./images/sdlc98.png?raw=true "Copilot response to authentication prompt")
 
 <br><br>
 
-8. We can also try our other example. Enter the prompt below. After running, you should see something like the screenshot below.
+9. We can also try our other example. Enter the prompt below. After running, you should see something like the screenshot below.
 
 <br>
 
@@ -125,11 +138,11 @@ Is there a module in our #codebase that handles data storage?
 
 <br>
 
-![Copilot response to datastore prompt](./images/sdlc66.png?raw=true "Copilot response to datastore prompt")
+![Copilot response to datastore prompt](./images/sdlc99.png?raw=true "Copilot response to datastore prompt")
 
 <br><br>
 
-9. Let's try one more query here. To demonstrate further how AI can help with planning, prompt Copilot with the prompt below (JWT = JSON Web Token):
+10. Let's try one more query here. To demonstrate further how AI can help with planning, prompt Copilot with the prompt below (JWT = JSON Web Token):
 
 <br>
 
@@ -139,15 +152,15 @@ What would it take to change #codebase to use JWT for authentication?
 
 <br>
 
-![Prompting Copilot](./images/sdlc67.png?raw=true "Prompting Copilot")
+![Prompting Copilot](./images/sdlc101.png?raw=true "Prompting Copilot")
 
 <br><br>
 
-10. After this runs, you should see an answer in the chat screen similar to what's shown in the screenshot below. Notice that it includes not only text explanations, but also the changed code. If you scroll down, you'll likely see a summary of the changes needed.
+11. After this runs, you should see an answer in the chat screen similar to what's shown in the screenshot below. Notice that it includes not only text explanations, but also the changed code. If you scroll down, you'll likely see a summary of the changes needed.
 
 <br>
 
-![Copilot response to JWT prompt](./images/sdlc68.png?raw=true "Copilot response to JWT prompt")
+![Copilot response to JWT prompt](./images/sdlc100.png?raw=true "Copilot response to JWT prompt")
 
 <br><br>
 
