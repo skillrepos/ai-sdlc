@@ -1,7 +1,7 @@
 # Incorporating AI into your SDLC
 ## Leveraging AI tooling across the phases of your software development lifecycle
 ## Session labs 
-## Revision 1.19 - 05/31/26
+## Revision 1.20 - 05/31/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -185,7 +185,7 @@ python app.py
 
 2. Next, let's open a second terminal to use for sending commands to the app. Above the terminal, click the two-column icon (*Split Terminal*) to get a second terminal next to the current one.
 
-![Split terminal](./images/sdlc92.png?raw=true "Split terminal")
+![Split terminal](./images/sdlc103.png?raw=true "Split terminal")
 
 <br><br>
 
@@ -202,63 +202,65 @@ curl -i \
 
 4. Notice that we get a 404 response and a message indicating that the URL was not found on the server.
 
+![Split terminal](./images/sdlc104.png?raw=true "Split terminal")
+
 <br><br>
 
 5. In our repository, we already have a GitHub Issue for this feature. Take a look at it by clicking on this link: [GitHub Issue #1](https://github.com/skillrepos/ai-sdlc/issues/1)
 
+![GitHub issue](./images/sdlc105.png?raw=true "GitHub issue")
+
 <br><br>
 
-6. In order to use this information as context for the AI, we'll add the text of the issue to the AI's prompt context. First, we need to get the text from the issue.
-We have a script for this in our project. Run the command below to do this. (The "1" is the number of the GitHub Issue.)
+6. Open a new chat by clicking on the `+` sign in the upper right of the chat panel.
+
+![GitHub issue](./images/sdlc106.png?raw=true "GitHub issue")
+
+<br><br>
+
+7. In Copilot's Chat interface, change the mode to `Plan` by clicking on the drop-down labeled `Ask` at the bottom.
+
+![Switch to Plan mode](./images/sdlc110.png?raw=true "Switch to Plan mode")
+
+<br><br>
+
+8. Enter the following prompt in the chat area and then submit it.
 
 ```
-../scripts/get-issue-info.sh 1
+Referencing https://github.com/skillrepos/ai-sdlc/issues/1, propose a diff to our Python codebase that implements the requested feature.
 ```
+![Context and prompt](./images/sdlc109.png?raw=true "Context and prompt")
 
 <br><br>
 
-7. The output of running this file should be a new file in your project named FIX_ISSUE_1.md. You can click on it and open it up to view the contents.
+9. Copilot will generate a proposed diff "plan" with some options at the bottom to proceed. Review the plan and then select the `Start Implementation` option at the bottom of the plan. Notice this will automatically switch the mode to `Agent` (in the bottom of the chat window) as it starts the implementation.
 
-![Displaying file](./images/sdlc11.png?raw=true "Displaying file")
-
-<br><br>
-
-8. In Copilot's Chat interface, change the mode to "Agent" by clicking on the drop-down labeled "Ask" at the bottom.
-
-![Switch to Agent mode](./images/sdlc10.png?raw=true "Switch to Agent mode")
+![Context and prompt](./images/sdlc111.png?raw=true "Context and prompt")
 
 <br><br>
 
-9. We now want to add this file as context for our prompt in the Chat panel. Click on the "Add context" item in the prompt area and select it from the list that pops up. (You may have to scroll down to find it.)
 
-![Adding context](./images/sdlc13.png?raw=true "Adding context")
+10. After Copilot processes the plan, it should show a section of `Todos` and a section of `files changed` above the Chat text entry area. (You can click on the ">" symbols to expand the list.) If you have one of the files open in the editor, you'll also see the highlighted proposed changes. You can review individual changes if you want, but when done, click on the blue `Keep` button in the `files changed` area of the chat to accept all changes.
 
-<br><br>
-
-10. With the FIX_ISSUE_1.md file attached as context, enter the following prompt in the chat area and then submit it (via *Enter* or with the button that looks like an arrow head at the bottom right of the dialog).
-
-```
-Here's the full text of GitHub Issue #1. Propose a diff to our Python codebase that implements the requested feature. Do not create or add any tests.
-```
-![Context and prompt](./images/sdlc15.png?raw=true "Context and prompt")
+![Reviewing changes](./images/sdlc112.png?raw=true "Reviewing changes")
 
 <br><br>
 
-11. Copilot will generate a "plan". After that, it may proceed to start making changes or it may stop. If it stops, tell it to proceed with the plan by typing "proceed" into the chat entry area and hitting "Enter".
+11. At this point, the agent may want to run some unit tests. Click on the `Allow` button to let it run the tests. (If you see test failures, you can ask the Agent to diagnose and fix them. This may be an interative process.)
 
-After Copilot processes the prompt, it should show two files changed - *app.py* and *datastore.py* - in a box above the Chat text entry area. (You may need to click on the ">" symbol to expand the list.)
-
-Click on the "+ -"  icon on the right of the "2 files changed" area in the dialog. (See figure below).  Take a look at the diffs. When you are satisfied with the proposed changes, click on the *Keep* button in the *Files changed* dialog. Then you can close the tab that was opened to show the comparisons.
-
-![Reviewing changes](./images/sdlc88.png?raw=true "Reviewing changes")
+![Getting errors fixed](./images/sdlc115.png?raw=true "Getting errors fixed")
 
 <br><br>
 
+    
 12. Now, let's try the *search* operation again. If your app was running when you made the changes in step 9, it should have automatically reloaded. If you see a message in its output of the sort "Detected change ... reloading", you should be good to go. But if you don't have that you can kill the process (CTRL+C) and then run the app again.
 
+![Running server](./images/sdlc116.png?raw=true "Running server")
+
 <br><br>
 
-13. You can try the search operation with the same curl command as before. This time, it should run and return a 200 code rather than 404 since the search endpoint is implemented. If the item is found, it will return the found item. If not, it returns the empty set "[]".
+
+13. Then you can try the search operation with the same curl command as before. This time, it should run and return a 200 code rather than 404 since the search endpoint is implemented. If the item is found, it will return the found item. If not, it returns the empty set "[]".
 
 ```
 # Search items:
@@ -266,6 +268,8 @@ curl -i \
   -H "Authorization: Bearer secret-token" \
   http://127.0.0.1:5000/items/search?q=milk
 ```
+
+![Running search](./images/sdlc117.png?raw=true "Running search")
 
 <br><br>
 
