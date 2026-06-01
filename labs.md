@@ -366,9 +366,7 @@ Fix the delete endpoint so that deleting a missing item returns 404 JSON {error:
 
 <br><br>
 
-1. For this lab, we'll utilize Copilot's Agent functionality again. Let's start a new chat by clicking on the large "+" button in the upper right of the Chat panel. Then change the mode from "Edit" to "Agent" as you've done before. If a dialog pops up about changing the chat, just answer "Yes". 
-
-![New chat](./images/sdlc72.png?raw=true "New chat")
+1. For this lab, we'll utilize Copilot's Agent functionality again. Start a new chat by clicking on the large "+" button in the upper right of the Chat panel. The mode should be set to `Agent` as before. 
 
 <br><br>
    
@@ -470,7 +468,7 @@ How do I test for security in #codebase?
 
 <br><br>
 
-2. Now let's give the AI a targeted set of context to work with.  Add the 3 files (app/app.py, app/auth.py, and app/datastore.py) as context. You can do this in a couple of ways. You can drag and drop the files from the explorer file list on the left into the dialog area or you can use the "Add Context" button and select the files. (You may need to click on "Files and Folders" in the context picker dialog.) **If other files show up as context, you can click on them in the dialog and an "X" should show up to remove them. (Or you can close them if they're open in the current tab in the IDE.)**
+2. Now let's give the AI a targeted set of context to work with.  Add the 3 files (app/app.py, app/auth.py, and app/datastore.py) as context. You can do this in a couple of ways. You can drag and drop the files from the explorer file list on the left into the dialog area or you can use the "Add Context" button and select the files. Or you can just add the "app" directory. (You may need to click on "Files and Folders" in the context picker dialog.) **If other files show up as context, you can click on them in the dialog and an "X" should show up to remove them. (Or you can close them if they're open in the current tab in the IDE.)**
 
 ![Selecting files for context](./images/sdlc76.png?raw=true "Selecting files for context")
 
@@ -485,6 +483,8 @@ How do I test for security in #codebase?
 ```
 Refactor the files to make them more efficient.
 ```
+
+![Refactor](./images/sdlc127.png?raw=true "Refactor")
 
 <br><br>
 
