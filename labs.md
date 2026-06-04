@@ -1,7 +1,7 @@
 # Incorporating AI into your SDLC
 ## Leveraging AI tooling across the phases of your software development lifecycle
 ## Session labs 
-## Revision 1.23 - 05/31/26
+## Revision 1.24 - 06/04/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -214,7 +214,7 @@ curl -i \
 
 6. Open a new chat by clicking on the `+` sign in the upper right of the chat panel.
 
-![GitHub issue](./images/sdlc106.png?raw=true "GitHub issue")
+![GitHub issue](./images/sdlc128.png?raw=true "GitHub issue")
 
 <br><br>
 
