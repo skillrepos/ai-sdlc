@@ -178,7 +178,7 @@ What would it take to change #codebase to use JWT for authentication?
 
 <br><br>
 
-1. Let's try out the app. Start the app running in the terminal via the command below:
+1. Let's try out the app. Start the app running in the terminal via the command below: (You can just close any pop-up dialogs that come up.)
 
 ```
 python app.py
@@ -221,7 +221,7 @@ curl -i \
 
 <br><br>
 
-7. In Copilot's Chat interface, change the mode to `Plan` by clicking on the drop-down labeled `Ask` at the bottom.
+7. In Copilot's Chat interface, change the mode to `Plan` by clicking on the drop-down `Ask` at the bottom.
 
 ![Switch to Plan mode](./images/sdlc110.png?raw=true "Switch to Plan mode")
 
@@ -263,7 +263,7 @@ Referencing https://github.com/skillrepos/ai-sdlc/issues/1, propose a diff to ou
 <br><br>
 
 
-13. Then you can try the search operation with the same curl command as before. This time, it should run and return a 200 code rather than 404 since the search endpoint is implemented. If the item is found, it will return the found item. If not, it returns the empty set "[]".
+13. Then you can try the search operation again in the terminal with the same curl command as before. This time, it should run and return a 200 code rather than 404 since the search endpoint is implemented. If the item is found, it will return the found item. If not, it returns the empty set "[]".
 
 ```
 # Search items:
