@@ -525,82 +525,8 @@ Refactor the files to make them more efficient.
 </p>
 </br></br>
 
-**Lab 6: Easy Documentation with AI**
 
-**Purpose: In this lab, we'll see how to use AI to quickly and easily create different kinds of documentation for our project.**
-
-<br><br>
-
-1. Let's start out by telling our AI to generate basic doc for our app.py file. Open the app.py file in the editor if it isn't already. Activate the inline chat dialog via Ctrl+I or Option+I and enter the following shortcut command and hitting *Enter* or submitting it:
-
-```
-/doc
-```
-
-![doc command](./images/sdlc49.png?raw=true "doc command")
-
-<br><br>
-
-2. After this, you'll probably see a large "chunk" of comments at the start of code. You can go ahead and "Accept" that via the button in the dialog.
-
-![doc results](./images/sdlc50.png?raw=true "doc results")
-
-<br><br>
-
-3. To get comments in the body of the code, we need to further prompt the AI. Let's tell Copilot to verbosely comment the code. Bring up the inline chat dialog and enter the prompt below in Copilot. (Optional: You can also choose to change the model that's being used by clicking on the model name. In the dialog, select a model that is "1x" or "0x" so it "cost" the same from your quota to use.  You might have to click an "Enable" button afterwards to enable the model access.)  Hit Enter/submit when done. (**NOTE:** If you don't get comments generated throughout the code, try issuing the same prompt in the main chat interface instead of the inline one.)
-
-```
-Verbosely comment all code in this file so it is easy to follow and understand
-```
-
-![verbose and change model](./images/sdlc78.png?raw=true "verbose and change model")
-
-<br><br>
-
-4. If you had to click the Enable button, you may need to input the same prompt again. Or, if don't see any results still, you can switch to a different model and try again. When ready, you can review the changes and select to "Accept" or "Close" in the inline chat dialog.
-
-![review changes](./images/sdlc89.png?raw=true "review changes")
-
-<br><br>
-   
-5. In the main chat panel, open a new chat (using the "+" control in the top right) and switch the mode back to "Ask". 
-
-<br><br>
-
-6. Let's generate documentation in the style of Sphinx (https://www.sphinx-doc.org/en/master/).  Now, in the main chat text area, enter the prompt below:
-
-```
-Generate Sphinx-style .rst API documentation for this Flask service
-```
-
-![generate Sphinx-style doc](./images/sdlc52.png?raw=true "Generate Sphinx-style doc")
-
-<br><br>
-
-7. Let's try another example. Let's have the AI generate simple functional documentation that we can share with others. Use the prompt below for this:
-
-```
-Generate functional documentation for the app and create a new block
-```
-
-<br><br>
-
-8. After the documentation is generated, you can hover over the output and insert it into a new file if you want. If you then save the file with a .md extension, you'll be able to see the document in Markdown format. (You can use the three-bar menu, in the upper left of the codespace, then select "File", then "Save As...".)
-
-![Insert into new file](./images/sdlc83.png?raw=true "Insert into new file")
-
-<br> 
-
-![Save functional doc](./images/sdlc54.png?raw=true "Save functional doc")
-
-<br><br>
-
- <p align="center">
-<b>[END OF LAB]</b>
-</p>
-</br></br>
-
-**Lab 7: Using AI to Simplify Onboarding/Explaining Code**
+**Lab 6: Using AI to Simplify Onboarding/Explaining Code**
 
 **Purpose: To show how AI can be used to explain code and also help with onboarding those new to a codebase.**
 
@@ -615,7 +541,7 @@ Generate functional documentation for the app and create a new block
 Explain in simple terms how this code works
 ```
 
-![Explain code](./images/sdlc55.png?raw=true "Explain code")
+![Explain code](./images/sdlc138.png?raw=true "Explain code")
 
 <br><br>
 
@@ -624,7 +550,7 @@ Explain in simple terms how this code works
 Provide examples of how to run this code
 ```
 
-![How to run](./images/sdlc56.png?raw=true "How to run")
+![How to run](./images/sdlc139.png?raw=true "How to run")
 
 <br><br>
 
@@ -633,17 +559,17 @@ Provide examples of how to run this code
 What are the most likely problems someone new to this codebase would run into. Explain the issue clearly and succinctly.
 ```
 
-![Most likely problems](./images/sdlc57.png?raw=true "Most likely problems")
+![Most likely problems](./images/sdlc140.png?raw=true "Most likely problems")
 
 <br><br>
 
-5. Let's take this a step further and have the AI create a general guide for new users to the code. You can use the prompt below. When done, you can hover over the code block and insert into a new file and then save as a .md file to see the formatting.
+5. Let's take this a step further and have the AI create a general guide for new users to the code. You can use the prompt below. When done, you can review the .md file in the editor by clicking on the link above the chat. Then click `Keep` to persist it.
    
 ```
-Create an onboarding guide for anyone brand new to this code who will be working with it or maintaining it.
+Create an onboarding guide as a single file for anyone brand new to this code who will be working with it or maintaining it.
 ```
 
-![Onboarding guide](./images/sdlc58.png?raw=true "Onboarding guide")
+![Onboarding guide](./images/sdlc141.png?raw=true "Onboarding guide")
 
 <br><br>
 
@@ -652,13 +578,13 @@ Create an onboarding guide for anyone brand new to this code who will be working
 Construct 10 questions to check understanding of how the code works. Then prompt the user on each question and check the answer. If the answer is correct, provide positive feedback. If the answer is not correct, explain why and provide the correct answer.
 ```
 
-![Checking for understanding](./images/sdlc59.png?raw=true "Checking for understanding")
+![Checking for understanding](./images/sdlc142.png?raw=true "Checking for understanding")
 
 <br><br>
 
 7. If you want, you can play along to check understanding. Just type your response in the chat dialog and then submit it. Copilot will tell you if the answer is right or wrong (with any needed explanation) and then move on to the next question.
 
-![Checking for understanding](./images/sdlc84.png?raw=true "Checking for understanding")
+![Checking for understanding](./images/sdlc143.png?raw=true "Checking for understanding")
 
 <br><br>
    
