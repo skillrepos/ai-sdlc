@@ -346,13 +346,7 @@ Fix the delete endpoint so that deleting a missing item returns 404 JSON {error:
 
 <br><br>
 
-9. (Only if needed.) If Copilot got it wrong and you now have errors (reported in the *PROBLEMS* tab at the bottom), you can right click and select "Fix with Copilot" and follow-through on the process from there.
-
-![Fix if needed](./images/sdlc71.png?raw=true "Fix if needed")  
-
-<br><br>
-
-10. Now, you can repeat step #1 (restart the app if it stopped) and hopefully you'll see a 404 error "Not found" instead of a 500 one.
+9. Now, you can repeat step #1 (restart the app if it stopped) and hopefully you'll see a 404 error "Not found" instead of a 500 one.
 
 ![Fixed code](./images/sdlc27.png?raw=true "Fixed code")
 
