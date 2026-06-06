@@ -418,7 +418,7 @@ What else in the #codebase should we test?
 
 <br><br>
 
-9. Copilot should suggest some other test cases and then ask if it should add them. You can tell it to add the most important ones with a prompt like the one below.
+9. Copilot should suggest some other test cases. At the end of that output, it will problably ask if it should add them or offer to implement them. You can tell it to add the most important ones with a prompt like the one below.
 
 ```
 Just add the most important ones.
@@ -459,19 +459,15 @@ How do I test for security in #codebase?
 
 <br><br>
 
-1.  Open a new chat and change Copilot's mode back to "Edit".
-
-![Change to Edit](./images/sdlc75.png?raw=true "Change to Edit")
+1.  Open a new chat - Copilot's mode should be `Agent`.
+   
+![New chat with agent](./images/sdlc131.png?raw=true "New chat with agent")
 
 <br><br>
 
 2. Now let's give the AI a targeted set of context to work with.  Add the 3 files (app/app.py, app/auth.py, and app/datastore.py) as context. You can do this in a couple of ways. You can drag and drop the files from the explorer file list on the left into the dialog area or you can use the "Add Context" button and select the files. Or you can just add the "app" directory. (You may need to click on "Files and Folders" in the context picker dialog.) **If other files show up as context, you can click on them in the dialog and an "X" should show up to remove them. (Or you can close them if they're open in the current tab in the IDE.)**
 
-![Selecting files for context](./images/sdlc76.png?raw=true "Selecting files for context")
-
-<br>
-
-![Add context](./images/sdlc45.png?raw=true "Add context")
+![Selecting files for context](./images/sdlc133.png?raw=true "Selecting files for context")
 
 <br><br>
    
@@ -485,13 +481,15 @@ Refactor the files to make them more efficient.
 
 <br><br>
 
-4. After this runs, you will likely see output like the screenshot below. Copilot will analyze the targeted files and identify areas it thinks efficiencies can be made. It will then offer the usual diffs and Keep/Undo options.
+4. After this runs, you will likely see output like the screenshot below. Copilot will analyze the targeted files and identify areas it thinks efficiencies can be made. It will then offer to run tests along with the usual diffs and Keep/Undo options.
 
-![Refactor suggestions](./images/sdlc77.png?raw=true "Refactor suggestions")
+![Refactor suggestions](./images/sdlc134.png?raw=true "Refactor suggestions")
 
 <br><br>
 
-5. You can go ahead and review the changes if you want and then Keep/Undo as needed. If you wanted, you could also add Copilot as a reviewer. (If you do add Copilot as a reviewer, don't forget to select the range in the pop-up dialog at the top.) **Next steps assume you're done with those changes and have accepted (keep) or discarded (undo) them.**
+5. You can go ahead and `Allow` it to run the tests. If it can't run the tests for some reason, just ignore that for now.
+  
+6. Now you can review the changes if you want and then Keep/Undo as needed. If you wanted, you could also review with Copilot as we did before. ( **Next steps assume you're done with those changes and have accepted (keep) or discarded (undo) them.** )
 
 <br><br>
 
@@ -501,13 +499,13 @@ Refactor the files to make them more efficient.
 
 7. Let's add logging to our functions. In the prompt area, add the prompt "Add logging for all endpoints". When ready, click Submit.
 
-![Logging prompt](./images/sdlc46.png?raw=true "Logging prompt")
+![Logging prompt](./images/sdlc135.png?raw=true "Logging prompt")
 
 <br><br>
 
 8. After this runs, you should see changes in *app.py*. Navigate through them and Apply/Keep changes as warranted.
 
-![Logging changes made](./images/sdlc47.png?raw=true "Logging changes made")
+![Logging changes made](./images/sdlc136.png?raw=true "Logging changes made")
 
 <br><br>
 
@@ -517,7 +515,7 @@ Refactor the files to make them more efficient.
 ../scripts/use-app.sh
 ```
 
-![Logging events](./images/sdlc48.png?raw=true "Logging events")
+![Logging events](./images/sdlc137.png?raw=true "Logging events")
 
 
 <br><br>
