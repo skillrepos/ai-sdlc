@@ -1,7 +1,7 @@
 # Incorporating AI into your SDLC
 ## Leveraging AI tooling across the phases of your software development lifecycle
 ## Session labs 
-## Revision 1.24 - 06/04/26
+## Revision 1.25 - 06/06/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -84,11 +84,14 @@ Is there already a module that implements our data store?
 
 <br><br>
 
-Then you'll likely see a link that says `Index?`. Click on that link to have Copilot create a local index of the repository.
+Then you'll likely see a link that says `Index?`. Click on that link to have Copilot create a local index of the repository. (Alternatively, if the indexing has already been run before, you might see `Update?` instead (second figure). If you see that, you can just click on `Update?` to bring the index up to date.)
 
 <br><br>
 
 ![Copilot indexing](./images/sdlc94.png?raw=true "Indexing with Copilot")
+
+![Copilot indexing update](./images/sdlc129.png?raw=true "Updating index with Copilot")
+
 
 <br><br>
 
@@ -156,7 +159,7 @@ What would it take to change #codebase to use JWT for authentication?
 
 <br><br>
 
-11. After this runs, you should see an answer in the chat screen similar to what's shown in the screenshot below. Notice that it includes not only text explanations, but also the changed code. If you scroll down, you'll likely see a summary of the changes needed.
+11. After this runs, you should see an answer in the chat screen similar to what's shown in the screenshot below.  If you scroll down, you'll likely see a summary of the changes needed.
 
 <br>
 
