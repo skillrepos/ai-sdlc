@@ -1,7 +1,7 @@
 # Incorporating AI into your SDLC
 ## Leveraging AI tooling across the phases of your software development lifecycle
 ## Session labs 
-## Revision 1.26 - 06/06/26
+## Revision 1.27 - 06/07/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -78,13 +78,13 @@ Is there already a module that implements our data store?
 
 <br><br>
 
-5. Click on the Copilot icon at the bottom. If you see a blue button to "Setup Copilot" or "Use AI Features", go ahead and click on that. 
+5. Click on the Copilot icon at the bottom. If you see a blue button to "Sign in" or "Setup Copilot" or "Use AI Features", go ahead and click on that. 
    
-![Setup Copilot](./images/sdlc87.png?raw=true "Setup Copilot")
+![Setup Copilot](./images/sdlc147.png?raw=true "Setup Copilot")
 
 <br><br>
 
-Then you'll likely see a link that says `Index?`. Click on that link to have Copilot create a local index of the repository. (Alternatively, if the indexing has already been run before, you might see `Update?` instead (second figure). If you see that, you can just click on `Update?` to bring the index up to date.)
+Then, if you click on the same Copilot icon, you'll likely see a link that says `Index?` or `Update?`. Click on that link to have Copilot create a local index of the repository. 
 
 <br><br>
 
