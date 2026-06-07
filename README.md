@@ -10,7 +10,7 @@ To do this, when logged in to GitHub, go to https://github.com/settings/codespac
 ![Changing codespace idle timeout value](./images/sdlc90.png?raw=true "Changing codespace idle timeout value")
 
 
-**2. Click on the button below to start a new codespace from this repository.**
+**2. Click on the button below to start a new codespace from this repository. (Note: On Macs, due to a bug in Copilot, only Chrome allows Copilot to directly execute commands in the terminal.)**
 
 Click here ➡️  [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/skillrepos/ai-sdlc?quickstart=1)
 
