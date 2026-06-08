@@ -1,7 +1,7 @@
 # Incorporating AI into your SDLC
 ## Leveraging AI tooling across the phases of your software development lifecycle
 ## Session labs 
-## Revision 1.27 - 06/07/26
+## Revision 1.28 - 06/08/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -242,20 +242,16 @@ Referencing https://github.com/skillrepos/ai-sdlc/issues/1, propose a diff to ou
 
 <br><br>
 
+10. After Copilot starts implementing the place, you will see it "thinking" and there will be a section of `files changed` above the Chat text entry area. (You can click on the ">" symbols to expand the list.) You may also be asked to allow running some test commands along the way. Just click the `Allow` button. (Note that due to a bug in Copilot and some browsers, the tests may or may not be able to be run automatically.)
 
-10. After Copilot processes the plan, it should show a section of `Todos` and a section of `files changed` above the Chat text entry area. (You can click on the ">" symbols to expand the list.) If you have one of the files open in the editor, you'll also see the highlighted proposed changes. You can review individual changes if you want, but when done, click on the blue `Keep` button in the `files changed` area of the chat to accept all changes.
+![Allowing testing](./images/sdlc148.png?raw=true "Allowing testing")
 
-![Reviewing changes](./images/sdlc112.png?raw=true "Reviewing changes")
+11. If you have one of the files open in the editor, you'll also see the highlighted proposed changes. You can review individual changes if you want, but when done, click on the blue `Keep` button in the `files changed` area of the chat to accept all changes.
 
-<br><br>
-
-11. At this point, the agent may want to run some unit tests. Click on the `Allow` button to let it run the tests. (If you see test failures, you can ask the Agent to diagnose and fix them. This may be an interative process.)
-
-![Getting errors fixed](./images/sdlc115.png?raw=true "Getting errors fixed")
+![Reviewing changes](./images/sdlc149.png?raw=true "Reviewing changes")
 
 <br><br>
 
-    
 12. Now, let's try the *search* operation again. If your app was running when you made the changes in step 9, it should have automatically reloaded. If you see a message in its output of the sort "Detected change ... reloading", you should be good to go. But if you don't have that you can kill the process (CTRL+C) and then run the app again.
 
 ![Running server](./images/sdlc116.png?raw=true "Running server")
