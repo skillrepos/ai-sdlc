@@ -324,7 +324,7 @@ Fix the delete endpoint so that deleting a missing item returns 404 JSON {error:
 <br><br>
 
 
-5. After Copilot processes this, you should see a changed app.py file. Let's add Copilot as a reviewer to have it take a look. Go to the diff (green part) and right-click and select the menu item `Review`.
+5. After Copilot processes this, you should see a changed app.py file. Let's add Copilot as a reviewer to have it take a look. Go to the diff (green part) and right-click and select the menu item `Review`. If asked to select a section for review at the top, you can select the `delete_item` function.
 
 ![Add Copilot review](./images/sdlc119.png?raw=true "Add Copilot review")
 
@@ -336,13 +336,13 @@ Fix the delete endpoint so that deleting a missing item returns 404 JSON {error:
 
 <br><br>
 
-8. Once you are satisfied with the set of changes and reviews, go ahead and click one of the Keep buttons to save the changes.
+7. Once you are satisfied with the set of changes and reviews, go ahead and click one of the Keep buttons to save the changes.
 
 ![Keep](./images/sdlc26.png?raw=true "Keep")
 
 <br><br>
 
-9. Now, you can repeat step #1 (restart the app if it stopped) and hopefully you'll see a 404 error "Not found" instead of a 500 one.
+8. Now, you can repeat step #1 (restart the app if it stopped) and hopefully you'll see a 404 error "Not found" instead of a 500 one.
 
 ![Fixed code](./images/sdlc27.png?raw=true "Fixed code")
 
