@@ -505,7 +505,7 @@ Refactor the files to make them more efficient.
 
 <br><br>
 
-9. (Optional) To show that the logging works, you can use the script we used previously in the "scripts" directory named use-app.sh. Running it now should cause INFO messages to be output to stderr. (Don't forget to make sure the app is running first in a separate terminal via *python app.py* If you hit errors running the app, it's possible that some edits could have affected the app code. You can compare against the original app code at https://github.com/skillrepos/ai-sdlc/blob/main/app/app.py.)
+9. (Optional) To show that the logging works, you can use the script we used previously in the "scripts" directory named use-app.sh. Running it now should cause INFO messages to be output to stderr. (Don't forget to make sure the app is running first in a separate terminal via *python app.py* If you hit errors running the app, it's possible that some edits could have affected the app code. You can compare against the original app code at https://github.com/skillrepos/ai-sdlc/blob/main/app/app.py or tell Copilot "fix the errors in app.py".)
 
 ```
 ../scripts/use-app.sh
@@ -526,13 +526,7 @@ Refactor the files to make them more efficient.
 
 **Purpose: To show how AI can be used to explain code and also help with onboarding those new to a codebase.**
 
-<br><br>
-
-1. Switch back to Agent mode for this lab. (If you do it in Ask mode, it will try to answer for all the different types of files in the project, rather than just the "app" code.
-
-<br><br>
-
-2. Let's start out having Copilot explain the code to us. Enter the prompt below in one of the chat interfaces.
+1. Let's start out having Copilot explain the code to us. Enter the prompt below in one of the chat interfaces (Agent mode).
 ```
 Explain in simple terms how this code works
 ```
@@ -541,7 +535,7 @@ Explain in simple terms how this code works
 
 <br><br>
 
-3. Someone just starting out with this code would need to also know how to run it, so let's have the AI explain how to do that as well.
+2. Someone just starting out with this code would need to also know how to run it, so let's have the AI explain how to do that as well.
 ```
 Provide examples of how to run this code
 ```
@@ -550,7 +544,7 @@ Provide examples of how to run this code
 
 <br><br>
 
-4. Let's also use the AI to try and anticipate any potential issues new users may run into. Here's a prompt for that.
+3. Let's also use the AI to try and anticipate any potential issues new users may run into. Here's a prompt for that.
 ```
 What are the most likely problems someone new to this codebase would run into. Explain the issue clearly and succinctly.
 ```
@@ -559,13 +553,19 @@ What are the most likely problems someone new to this codebase would run into. E
 
 <br><br>
 
-5. Let's take this a step further and have the AI create a general guide for new users to the code. You can use the prompt below. When done, you can review the .md file in the editor by clicking on the link above the chat. Then click `Keep` to persist it.
+4. Let's take this a step further and have the AI create a general guide for new users to the code. You can use the prompt below. When done, you can review the .md file in the editor by clicking on the link above the chat. Then click `Keep` to persist it.
    
 ```
 Create an onboarding guide as a single file for anyone brand new to this code who will be working with it or maintaining it.
 ```
 
-![Onboarding guide](./images/sdlc141.png?raw=true "Onboarding guide")
+![Creating onboarding guide](./images/sdlc151.png?raw=true "Creating onboarding guide")
+
+<br><br>
+
+5. After this is done, you should see a new *ONBOARDING.md* file in the repo. You can open it up and review it.
+
+![Onboarding guide](./images/sdlc150.png?raw=true "Onboarding guide")
 
 <br><br>
 
